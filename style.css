@@ -1,0 +1,98 @@
+body
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background-image: url("star.jpg");
+    background-size: cover;
+    
+    }
+    .long
+    {   animation-name:long;
+        animation-timing-function: linear;
+        animation-duration: 4s;
+        font-family: 'Pathway Gothic One', sans-serif;
+        color:blue;
+        position: absolute;
+        font-size: 200px;
+        letter-spacing: 6px;
+        background-color: black;
+        width:100vw;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        z-index: 1;
+    }
+.text
+{
+    transform-origin: center bottom;
+    transform: perspective(900px) rotateX(25deg);
+    width: 80%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    z-index: 3;
+    
+
+}
+
+.logo{
+    animation-name:logo;
+    animation-timing-function: linear;
+    position: absolute;
+    animation-duration: 6s;
+    text-align:justify; 
+    z-index:2; 
+    opacity:0;
+    animation-delay:4s;
+    
+}
+
+.title
+{
+    animation-name:title;
+    animation-timing-function: linear;
+    position: absolute;
+    animation-duration: 15s;
+    text-align:justify;  
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: #feda4a;
+    font-size: 100px;
+    letter-spacing: 6px;
+    animation-delay:9s;
+    top:100%;
+    
+    
+}
+
+
+
+@keyframes long
+{
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:0;}
+    100% {opacity:0;}
+
+
+}
+
+@keyframes title
+ {
+    0% {top: 100%; opacity:1;}
+    80%{opacity:1;}
+    100% {top: 0%; opacity:0}
+}
+
+@keyframes logo
+ {
+    0% {transform: scale(2); opacity:1;}
+    50%{transform: scale(0.2); opacity:1;}
+    100% {transform: scale(0) ; opacity:0;}
+}
+
